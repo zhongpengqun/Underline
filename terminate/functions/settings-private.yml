@@ -1,0 +1,9 @@
+version: '0.1'
+document_dirs:
+- D:\zhny-notes
+- C:\Users\zlzk\Documents\GitHub\MyCustomizedShortcuts\functions\note
+- C:\Users\zlzk\Documents\GitHub\MyCustomizedShortcuts\functions\storehouse-note
+extensions:
+- txt
+- md
+- py

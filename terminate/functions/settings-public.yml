@@ -1,0 +1,8 @@
+version: '0.1'
+document_dirs:
+- C:\Users\zlzk\Documents\GitHub\notebook\docs
+- C:\Users\zlzk\Documents\GitHub\MyCustomizedShortcuts\documents
+extensions:
+- txt
+- md
+- py

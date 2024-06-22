@@ -1,0 +1,6 @@
+version: '0.1'
+document_dirs:
+- D:\zhny-notes
+extensions:
+- docx
+- pdf

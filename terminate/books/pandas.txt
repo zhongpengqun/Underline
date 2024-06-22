@@ -1,0 +1,65 @@
+- pandas与numpy的关系
+    - pandas是建立在NumPy之上的库，可以直接调用NumPy的函数和方法。pandas中的DataFrame和Series可以通过.values属性转换为NumPy的ndarray，便进行NumPy的算和操作。同时，pandas也提供了很多与NumPy配套使用的工具，如pandas的数据结构可以接受NumPy数组作为输入，pandas的函数和方法也能返回NumPy数组。
+
+- 行数列数
+    - df.shape[0]， df.shape[1]
+
+- API Json转化为DataFrame
+    - df = pd.DataFrame(data)
+    - df = pd.read_json('data.json')
+
+- 从第1行开始apply某列, todo
+    - df['A'] = df['A'].apply(lambda x: 'Positive' if x > 0 else 'Non-positive')
+
+- 获取某列的distinct值s
+    - df['sectionID'].unique().tolist()
+        - distinct 2个column呢？
+            - df.groupby(['col_a', 'col_b']).ngroups  个数
+            - 或 len(set(zip(df['col_a'],df['col_b'])))
+
+- 提取rows where组成一个新的DataFrame
+    - result[_device] = df.loc[(df['deviceCode'] == _device)]
+        - https://stackoverflow.com/questions/63529322/how-to-create-new-dataframe-by-filtering-a-column-of-another-dataframe
+    - 抽取列组成新df
+
+- 解释一下
+    for idx, row in data.iterrows():
+        mask = combined_df['datetime'] == row['target_dt']
+        for data_col, combined_col in column_mapping.items():
+            combined_df.loc[mask, combined_col] = row[data_col]
+
+- 连续3天温度>30的rows
+
+- .apply(func  如果func有多个传入参数呢？
+    - df.apply(some_func, var1='DOG', axis=1) 或 df.apply(some_func, args=('DOG', ), axis=1)
+    - 如果出于任何原因，这对你的用例不起作用，那么你可以回到使用 lambda： df.apply(lambda row: some_func(row, 'DOG'), axis=1)
+
+- 获取时间最近的一条数据
+    - data.sort_values(by='AdmissionDate')
+
+- pandas.api.types.is_scalar
+    - In pandas, scalar values are single values like integers, floats, or strings. When you're creating a DataFrame from these values, pandas needs an index to structure the data.
+    - This includes:
+        numpy array scalar (e.g. np.int64)
+        Python builtin numerics
+        Python builtin byte arrays and strings
+        None
+        datetime.datetime
+        datetime.timedelta
+        Period
+        decimal.Decimal
+        Interval
+        DateOffset
+        Fraction
+        Number.
+    - 我的理解是不可变的值被视为scalar
+
+- 四种有关数据透视的通用函数
+    pandas.melt()
+    pandas.pivot()
+    pandas.pivot_table()
+    pandas.crosstab()
+
+- df.isna().any().any()  &  df.isna().any()  & df.isna().all()
+    - DataFrame.all() method checks whether all elements are True, potentially over an axis.
+    

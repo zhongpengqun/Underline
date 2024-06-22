@@ -1,0 +1,39 @@
+VSCode快捷键：
+
+alt + ↓ 或 ↑       快速移动一行
+shift + alt + ↓    快速复制一行
+tab + shift        向前缩进
+Ctrl + H           替换
+Ctrl + Shift + H	替换文件 Replace in files
+
+Ctrl + L           选中当前行
+ctrl + d           选定多个相同的单词
+Ctrl + Shift + L   选择所有出现在当前选中的行
+Shift + Alt + →	    展开选择 Expand selection
+Shift + Alt + ←	    缩小选择 Shrink selection
+
+alt + shift + 拖动鼠标      选择某个区块
+
+shift + alt + c    文件路径
+
+alt + shift + 左箭头 / 右箭头       选中行的部分
+
+ctrl + k + 0-9     折叠代码 (0是完全折叠)
+ctrl + k + j       展开代码 (完全展开代码)
+
+Ctrl + Shift + [   Fold (collapse) region
+Ctrl + Shift + ]   Unfold (uncollapse) region
+
+Ctrl + Shift + Tab	导航编辑器组历史记录 Navigate editor group history
+Alt + ←/→	        返回/前进 Go back / forward
+
+Ctrl + ↑ / ↓	        向上/向下滚动 Scroll up/down
+Shift + PgUp / PgDown	向上/向下滚动页面 Scroll page up/down
+
+光标操作：
+Ctrl + Alt +↑/↓	    在上/下插入光标 Insert cursor above / below
+
+F2	                重命名符号 Rename Symbol
+
+显示：
+F11	                切换全屏 Toggle full screen
