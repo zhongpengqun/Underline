@@ -172,6 +172,7 @@ class Application(DocumentsFunctions, Overviewpy, ClipBoardFunctions, CharsFunct
 
         #
         self.ui_books_list = ''
+
     @property
     def current_active_mode(self):
         for _ in self.modes:
